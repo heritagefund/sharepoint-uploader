@@ -1,0 +1,11 @@
+{
+  "name": "sharepoint-uploader",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@microsoft/microsoft-graph-client": "^2.0.0",
+    "@types/node": "^12.12.14",
+    "simple-oauth2": "^3.1.0"
+  }
+}
