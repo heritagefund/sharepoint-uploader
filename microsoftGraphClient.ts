@@ -34,5 +34,4 @@ async function largeFileUpload(client: Client) {
     }
 }
 
-
-  largeFileUpload(client).then(console.log)
+largeFileUpload(client).then(console.log)

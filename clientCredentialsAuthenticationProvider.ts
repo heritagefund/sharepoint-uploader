@@ -1,4 +1,3 @@
-// MyAuthenticationProvider.ts
 import { AuthenticationProvider } from "@microsoft/microsoft-graph-client";
 require('dotenv').config()
 import * as request from 'request-promise-native'
