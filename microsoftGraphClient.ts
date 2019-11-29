@@ -7,10 +7,10 @@ const options = {
     authProvider
 }
 const client = Client.initWithMiddleware(options)
+const fileName = 'file.txt'
+const file =  fs.readFileSync('file.txt')
 
-async function largeFileUpload(client: Client) {
-    const file = await fs.promises.readFile('file.txt')
-    const fileName = 'file.txt'
+async function largeFileUpload(client: Client, file: Buffer, fileName: string) {
     try {
         const requestUrl = `/drives/${process.env.DRIVE_ID}/items/${process.env.ITEM_ID}:/${fileName}:/createUploadSession`;
         const payload = {
@@ -34,4 +34,4 @@ async function largeFileUpload(client: Client) {
     }
 }
 
-largeFileUpload(client).then(console.log)
+largeFileUpload(client, file, fileName).then(console.log)
